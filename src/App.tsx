@@ -1,6 +1,9 @@
 // import Counter from "./Reducer/Counter"
 // import NameList from "./Items/NameList"
-import Todo from "./Todo/Todo"
+// import Todo from "./Todo/Todo"
+import { store } from "./Redux/CounterRedux"
+import { Provider } from "react-redux"
+import ReduxCounter from './Redux/ReduxCounter'
 
 function App() {
   return (
@@ -8,7 +11,10 @@ function App() {
       <h1>Hai this redux app</h1>
       {/* <Counter/> */}
       {/* <NameList/> */}
-      <Todo/>
+      {/* <Todo/> */}
+      <Provider store={store}>
+      <ReduxCounter/>
+      </Provider>
     </>
   )
 }
