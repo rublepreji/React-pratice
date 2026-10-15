@@ -1,7 +1,7 @@
 // import Counter from "./Reducer/Counter"
 // import NameList from "./Items/NameList"
 // import Todo from "./Todo/Todo"
-import { store } from "./Redux/CounterRedux"
+import store from "./Redux/Store"
 import { Provider } from "react-redux"
 import ReduxCounter from './Redux/ReduxCounter'
 
