@@ -5,7 +5,8 @@ type Action = {type:'increment'} |{type: 'decrement'}
 
 
 export const appReducer = combineReducers({
-    value: CounterReducer
+    value: CounterReducer,
+    products: ProductReducer
 })
 
 
@@ -16,6 +17,32 @@ function CounterReducer(prevState= 0,action: Action){
         case 'decrement':
             return prevState-1
         default: return prevState
+    }
+}
+
+type ProductActionType = {type:'setData', payload:[]} | {type:'loading',payload:boolean} | {type:'error',payload:''}
+
+function ProductReducer(prevState= {
+    data:[],
+    loading:false,
+    error:''
+}, action:ProductActionType){
+    switch(action.type){
+        case 'setData':
+            return {
+                ...prevState,
+                data: action.payload
+            }
+        case 'loading':
+            return {
+                ...prevState,
+                loading: action.payload
+            }
+        case 'error':
+            return {
+                ...prevState,
+                error: action.payload
+            }
     }
 }
 

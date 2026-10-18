@@ -1,9 +1,13 @@
 // import Counter from "./Reducer/Counter"
 // import NameList from "./Items/NameList"
 // import Todo from "./Todo/Todo"
-import store from "./Redux/Store"
+// import store from "./Redux/Store"
 import { Provider } from "react-redux"
-import ReduxCounter from './Redux/ReduxCounter'
+import productStore from "./Redux-Thunk/ProductRedux"
+// import ReduxCounter from './Redux/ReduxCounter'
+
+// import Parent from "./Immer/Sample"
+import ProductList from "./Redux-Thunk/ProductList"
 
 function App() {
   return (
@@ -12,9 +16,15 @@ function App() {
       {/* <Counter/> */}
       {/* <NameList/> */}
       {/* <Todo/> */}
-      <Provider store={store}>
+      {/* <Provider store={store}>
       <ReduxCounter/>
+      </Provider> */}
+
+      <Provider store={productStore}>
+        <ProductList/>
       </Provider>
+
+      {/* <Parent/> */}
     </>
   )
 }
