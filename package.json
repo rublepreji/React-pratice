@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.13.0",
     "axios": "^1.20.0",
     "immer": "^11.1.21",
     "react": "^19.2.8",
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@redux-devtools/extension": "^4.0.0",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",

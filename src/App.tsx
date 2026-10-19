@@ -3,7 +3,7 @@
 // import Todo from "./Todo/Todo"
 // import store from "./Redux/Store"
 import { Provider } from "react-redux"
-import productStore from "./Redux-Thunk/ProductRedux"
+import productStore from "./ReduxToolKit/store"
 // import ReduxCounter from './Redux/ReduxCounter'
 
 // import Parent from "./Immer/Sample"

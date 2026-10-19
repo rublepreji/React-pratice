@@ -7,7 +7,7 @@ function getProducts(){
             dispatch({type:'loading',payload:true})
 
             const response = await axios.get(
-            " https://fakestoreapi.com/products?utm_source=chatgpt.com"
+            " https://fakestoreapi.com/products"
         )
         dispatch({
             type: 'setData',

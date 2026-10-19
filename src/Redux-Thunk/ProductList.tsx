@@ -1,14 +1,13 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import ProductApi from './ProductApi'
-import type{ RootState, AppDispatch } from "./ProductRedux";
+import {ProductApi} from '../ReduxToolKit/ProductReducer'
+import type{ RootState, AppDispatch } from "../ReduxToolKit/store";
 
 function ProductList(){
     const dispatch = useDispatch<AppDispatch>()
 
-    const data = useSelector((state:RootState)=>state.data)
-    const loading = useSelector((state:RootState)=>state.loading)
-    const error = useSelector((state:RootState)=>state.error)
+    const {data,loading,error} = useSelector((state:RootState)=>state.productReducer)
+    
     console.log(data)
 
     useEffect(()=>{

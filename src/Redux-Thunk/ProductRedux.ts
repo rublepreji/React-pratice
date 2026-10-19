@@ -1,6 +1,6 @@
-import { legacy_createStore } from "redux";
+import { legacy_createStore, applyMiddleware } from "redux";
 import { thunk } from "redux-thunk";
-import { applyMiddleware } from "redux";
+import {composeWithDevTools} from '@redux-devtools/extension'
 
 type Product ={
     id:number;
@@ -45,7 +45,7 @@ function productReducer(state:ProductState=intialState, action:ActionType){
 }
 
 
-const productStore = legacy_createStore(productReducer,applyMiddleware(thunk))
+const productStore = legacy_createStore(productReducer,composeWithDevTools(applyMiddleware(thunk)))
 
 export type RootState = ReturnType<typeof productStore.getState>;
 
