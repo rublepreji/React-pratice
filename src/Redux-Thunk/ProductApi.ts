@@ -7,7 +7,7 @@ function getProducts(){
             dispatch({type:'loading',payload:true})
 
             const response = await axios.get(
-            " https://fakestoreapi.com/products"
+            "https://fakestoreapi.com/products"
         )
         dispatch({
             type: 'setData',

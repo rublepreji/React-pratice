@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {ProductApi} from '../ReduxToolKit/ProductReducer'
 import type{ RootState, AppDispatch } from "../ReduxToolKit/store";
+import ErrorBoundary from "./ErrorBoundary";
 
 function ProductList(){
     const dispatch = useDispatch<AppDispatch>()
@@ -19,14 +20,20 @@ function ProductList(){
 
     return (
         <>
+        <ErrorBoundary>
+            throw new Error("sldjflj");
+            
             <h1>Product List</h1>
             {
                 data.map((users)=>{
                     return (
+                        <>
                         <h3 key={users.id}>{users.title}</h3>
+                        </>
                     )
                 })
             }
+            </ErrorBoundary>
         </>
     )
 }
